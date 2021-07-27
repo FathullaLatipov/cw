@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="color:red">{{ books.title }}</h5>
                     <p class="card-text">{{ books.description }}</p>
-                    <a href="{% url 'history:history' %}" class="btn btn-primary stretched-link">Go somewhere</a>
+                    <a href="{% url 'history:history' pk=books.pk %}" class="btn btn-primary stretched-link">Go somewhere</a>
                 </div>
             </div>
         </div>
