@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h3 class="text-center">Books</h3>
+    <div class="row">
+        {% for books in object_list %}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ books.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:red">{{ books.title }}</h5>
+                    <p class="card-text">{{ books.description }}</p>
+                    <a href="{% url 'history:history' %}" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
